@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: './', // Use relative paths for GitHub Pages
+  base: './cybernothing-terminal-game/', 
   build: {
     outDir: 'dist',
   },
