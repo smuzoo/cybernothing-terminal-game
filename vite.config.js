@@ -10,5 +10,11 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html')
       }
     }
+  },
+  optimizeDeps: {
+    exclude: ['@rollup/rollup-linux-x64-gnu']
+  },
+  server: {
+    host: true
   }
 })
