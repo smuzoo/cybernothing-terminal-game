@@ -188,6 +188,14 @@ html, body {
   align-items: center;
   background: #000;
   box-sizing: border-box;
+<<<<<<< Updated upstream
+=======
+  padding: 16px;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  right: 0;
+>>>>>>> Stashed changes
 }
 
 /* Terminal output area */
@@ -377,6 +385,28 @@ html, body {
 }
 
 @media (max-width: 600px) {
+<<<<<<< Updated upstream
+=======
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  #terminal-container {
+    padding: 8px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+  }
+  
+>>>>>>> Stashed changes
   #terminal-output, #terminal-input-line {
     max-width: 100vw;
     padding: 1em 0.5em 0.5em 0.5em;
