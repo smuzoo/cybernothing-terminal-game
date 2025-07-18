@@ -1,4 +1,4 @@
-(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const l of document.querySelectorAll('link[rel="modulepreload"]'))c(l);new MutationObserver(l=>{for(const e of l)if(e.type==="childList")for(const r of e.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&c(r)}).observe(document,{childList:!0,subtree:!0});function i(l){const e={};return l.integrity&&(e.integrity=l.integrity),l.referrerPolicy&&(e.referrerPolicy=l.referrerPolicy),l.crossOrigin==="use-credentials"?e.credentials="include":l.crossOrigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function c(l){if(l.ep)return;l.ep=!0;const e=i(l);fetch(l.href,e)}})();let y="en";const U={en:{intro:`MOKSHA CORP. TERMINAL SESSION #128
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const c of document.querySelectorAll('link[rel="modulepreload"]'))r(c);new MutationObserver(c=>{for(const E of c)if(E.type==="childList")for(const T of E.addedNodes)T.tagName==="LINK"&&T.rel==="modulepreload"&&r(T)}).observe(document,{childList:!0,subtree:!0});function l(c){const E={};return c.integrity&&(E.integrity=c.integrity),c.referrerPolicy&&(E.referrerPolicy=c.referrerPolicy),c.crossOrigin==="use-credentials"?E.credentials="include":c.crossOrigin==="anonymous"?E.credentials="omit":E.credentials="same-origin",E}function r(c){if(c.ep)return;c.ep=!0;const E=l(c);fetch(c.href,E)}})();let L="en";const G={en:{intro:`MOKSHA CORP. TERMINAL SESSION #128
 ----------------------------------
 USER TYPE: KARMIC PRISONER
 STATUS: FORMER CYBERMONK → DATA TERRORIST
@@ -83,7 +83,71 @@ CYBERNIRVANA EXTRAS:
    FRAGMENTED, 38% RECOVERED
    > REALITY CHECK: What you see is not always what is real.
    > SYSTEM: Sometimes, to erase a memory, you must erase yourself.
-   (But how?)`,catNotFound:`
+   (But how?)`,catSecret:`
+> secret.txt CONTENT:
+   'The truth is hidden in plain sight'
+   'Look deeper than the surface'
+   'The answer lies within'`,catTodo:`
+> todo.md CONTENT:
+   - [ ] Find the exit
+   - [ ] Understand the system
+   - [ ] Achieve enlightenment
+   - [x] Enter the terminal`,catKarma:`
+> karma.log CONTENT:
+   KARMA LEVEL: 0
+   STATUS: RESET
+   NOTE: All debts cleared`,catSacrifice:`
+> sacrifice.dll CONTENT:
+   [BINARY DATA]
+   FUNCTION: SELF_DELETION
+   STATUS: LOCKED
+   NOTE: Required for final_delete.exe`,catBear:`
+> bear.png CONTENT:
+   [IMAGE: ROBOT BEAR]
+   STATUS: HEADLESS
+   NOTE: Emotional anchor, now broken`,catMemoriesZip:`
+> memories.zip CONTENT:
+   [COMPRESSED DATA]
+   STATUS: CORRUPTED
+   NOTE: Cannot be extracted`,catProjector:`
+> projector.img CONTENT:
+   [HOLOGRAM DATA]
+   STATUS: FLICKERING
+   NOTE: Shows unknown child with torn kimono`,catVoid:`
+> void.txt CONTENT:
+   'The void stares back'
+   'Nothing is everything'
+   'Emptiness is full'`,catFinalDelete:`
+> final_delete.exe CONTENT:
+   [EXECUTABLE DATA]
+   STATUS: LOCKED
+   NOTE: Requires sacrifice.dll to run`,catErrorLog:`
+> error.log CONTENT:
+   ERROR: ERROR
+   ERROR: ERROR
+   ERROR: ERROR
+   [LOOP DETECTED]`,catWall:`
+> wall.txt CONTENT:
+   '127 → 128'
+   'You will not disappear'
+   'Scratches: countless'`,catGlitch:`
+> glitch.sys CONTENT:
+   [SYSTEM GLITCH]
+   STATUS: UNSTABLE
+   NOTE: Reality distortion detected`,catBuddha:`
+> buddha.png CONTENT:
+   [IMAGE: BUDDHA-GLITCH]
+   STATUS: FRAGMENTED
+   NOTE: Enlightenment: 404`,catEye:`
+> eye.dat CONTENT:
+   [EYE DATA]
+   STATUS: WATCHING
+   NOTE: It sees you`,catReadme:`
+> README.md CONTENT:
+   # MOKSHA TERMINAL
+   Welcome to the void.
+   Find your way out.
+   Or don't.`,catNotFound:`
 > ERROR: FILE '{file}' NOT FOUND
 > (DOES IT MATTER?)`,scanError:`
 > ERROR: No target specified for 'scan'. Try: scan <target>`,scanRoom:`
@@ -248,7 +312,9 @@ Session closed.`,philosophy:`
 > SYSTEM: Sometimes, the only way out is to do... nothing. Or to erase yourself.`,realityCheckGlitch:"> SYSTEM: SuO -rf  /SF ... (try to read between the lines)",hint3:`
 > HINT:
    TRY 'scan room', 'scan wall', 'scan projector', 'scan bear', 'scan self', 'scan void', 'scan buddha', 'scan eye', 'scan user'...
-   (OR JUST TRY WORDS)`,hint7:`
+   (OR JUST TRY WORDS)`,hintScanUser:`
+> HINT:
+   TRY 'scan user' - IT MIGHT REVEAL SOMETHING IMPORTANT ABOUT YOUR FILES...`,hint7:`
 > SYSTEM ALERT:
    ALL ACTIONS PREDICTED
    YOUR 'CHOICES' ARE ILLUSIONS`,hint12:`
@@ -297,7 +363,64 @@ Session closed.`,philosophy:`
 1. English
 2. Русский
 
-Enter choice (1 or 2):`,languageSelected:"Language selected: {lang}"},ru:{intro:`MOKSHA CORP. СЕССИЯ ТЕРМИНАЛА #128
+Enter choice (1 or 2):`,languageSelected:"Language selected: {lang}",helpBasic:`
+> MOKSHA TERMINAL HELP
+--------------------------------
+CORE COMMANDS:
+  ls ................ list files
+  cat <file> ........ read file
+  scan <target> ..... analyze object
+  history .......... past attempts
+  run .............. execute program
+  sudo .............. get superuser access (requires password)
+
+> TIP:
+   YOU CAN SCAN ALMOST ANYTHING:
+     scan room, scan bear, scan self, scan wall, scan projector, scan void, scan error, scan glitch, scan buddha,
+ scan eye, scan user, scan network
+   (OR DON'T DO ANYTHING. THE CHOICE IS YOURS)
+
+> SYSTEM NOTE: Terminal may glitch. Commands may not respond correctly on first try.
+`,helpSudo:`
+> MOKSHA TERMINAL HELP (SUDO ACCESS)
+--------------------------------
+CORE COMMANDS:
+  ls ................ list files
+  cat <file> ........ read file
+  scan <target> ..... analyze object
+  history .......... past attempts
+  run .............. execute program
+
+ADVANCED:
+  sudo rm -rf /self ..... self-destruct
+  query --philosophy ....,. ask system
+
+CYBERNIRVANA EXTRAS:
+  scan network ...... network scan
+  whoami ............ show user/system info
+  reality check ..... meta reality fragments
+
+> TIP:
+   YOU CAN SCAN ALMOST ANYTHING:
+     scan room, scan bear, scan self, scan wall, scan projector, scan void, scan error, scan glitch, scan buddha,
+ scan eye, scan user, scan network
+   (OR DON'T DO ANYTHING. THE CHOICE IS YOURS)
+`,catPasswords:`
+> passwords.docx CONTENT:
+   USERNAME: admin
+   PASSWORD: LivingInTheVoid
+   NOTE: Use 'sudo' command to access advanced features
+   STATUS: ACTIVE`,sudoCommand:"sudo",sudoUsage:`
+> USAGE: sudo <command>
+> EXAMPLE: sudo rm -rf /self`,sudoAccessGranted:`
+> SUDO ACCESS GRANTED
+> Advanced commands now available. Type 'help' to see all options.`,sudoAccessDenied:`
+> ACCESS DENIED
+> Incorrect password or insufficient privileges.`,sudoPrompt:`
+> [sudo] password for user: `,scanUserHintSudo:`
+> HINT: Check your home files. There might be something useful in passwords.docx...`,scanUserHintBasic:`
+> HINT: The answer may be closer than you think. What if you could remove yourself from the system?`,fileWithoutCat:`
+> ERROR: To read file '{file}', use 'cat {file}' command`},ru:{intro:`MOKSHA CORP. СЕССИЯ ТЕРМИНАЛА #128
 ----------------------------------
 ТИП ПОЛЬЗОВАТЕЛЯ: КАРМИЧЕСКИЙ ЗАКЛЮЧЕННЫЙ
 СТАТУС: БЫВШИЙ КИБЕРМОНАХ → ТЕРРОРИСТ ДАННЫХ
@@ -382,7 +505,71 @@ Enter choice (1 or 2):`,languageSelected:"Language selected: {lang}"},ru:{intro:
    ФРАГМЕНТИРОВАНО, 38% ВОССТАНОВЛЕНО
    > ПРОВЕРКА РЕАЛЬНОСТИ: То, что вы видите, не всегда реально.
    > СИСТЕМА: Иногда, чтобы стереть память, нужно стереть себя.
-   (Но как?)`,catNotFound:`
+   (Но как?)`,catSecret:`
+> СОДЕРЖИМОЕ secret.txt:
+   'Правда скрыта на виду'
+   'Смотри глубже поверхности'
+   'Ответ лежит внутри'`,catTodo:`
+> СОДЕРЖИМОЕ todo.md:
+   - [ ] Найти выход
+   - [ ] Понять систему
+   - [ ] Достичь просветления
+   - [x] Войти в терминал`,catKarma:`
+> СОДЕРЖИМОЕ karma.log:
+   УРОВЕНЬ КАРМЫ: 0
+   СТАТУС: СБРОШЕН
+   ЗАМЕТКА: Все долги погашены`,catSacrifice:`
+> СОДЕРЖИМОЕ sacrifice.dll:
+   [БИНАРНЫЕ ДАННЫЕ]
+   ФУНКЦИЯ: САМОУДАЛЕНИЕ
+   СТАТУС: ЗАБЛОКИРОВАН
+   ЗАМЕТКА: Требуется для final_delete.exe`,catBear:`
+> СОДЕРЖИМОЕ bear.png:
+   [ИЗОБРАЖЕНИЕ: РОБОТ-МЕДВЕДЬ]
+   СТАТУС: БЕЗГОЛОВЫЙ
+   ЗАМЕТКА: Эмоциональный якорь, теперь сломан`,catMemoriesZip:`
+> СОДЕРЖИМОЕ memories.zip:
+   [СЖАТЫЕ ДАННЫЕ]
+   СТАТУС: ПОВРЕЖДЕН
+   ЗАМЕТКА: Нельзя извлечь`,catProjector:`
+> СОДЕРЖИМОЕ projector.img:
+   [ДАННЫЕ ГОЛОГРАММЫ]
+   СТАТУС: МЕРЦАЕТ
+   ЗАМЕТКА: Показывает неизвестного ребенка с разорванным кимоно`,catVoid:`
+> СОДЕРЖИМОЕ void.txt:
+   'Пустота смотрит назад'
+   'Ничто есть все'
+   'Пустота полна'`,catFinalDelete:`
+> СОДЕРЖИМОЕ final_delete.exe:
+   [ДАННЫЕ ИСПОЛНЯЕМОГО ФАЙЛА]
+   СТАТУС: ЗАБЛОКИРОВАН
+   ЗАМЕТКА: Требуется sacrifice.dll для запуска`,catErrorLog:`
+> СОДЕРЖИМОЕ error.log:
+   ОШИБКА: ОШИБКА
+   ОШИБКА: ОШИБКА
+   ОШИБКА: ОШИБКА
+   [ОБНАРУЖЕН ЦИКЛ]`,catWall:`
+> СОДЕРЖИМОЕ wall.txt:
+   '127 → 128'
+   'Вы не исчезнете'
+   'Царапины: бесчисленны'`,catGlitch:`
+> СОДЕРЖИМОЕ glitch.sys:
+   [СИСТЕМНЫЙ ГЛИТЧ]
+   СТАТУС: НЕСТАБИЛЕН
+   ЗАМЕТКА: Обнаружено искажение реальности`,catBuddha:`
+> СОДЕРЖИМОЕ buddha.png:
+   [ИЗОБРАЖЕНИЕ: БУДДА-ГЛИТЧ]
+   СТАТУС: ФРАГМЕНТИРОВАН
+   ЗАМЕТКА: Просветление: 404`,catEye:`
+> СОДЕРЖИМОЕ eye.dat:
+   [ДАННЫЕ ГЛАЗА]
+   СТАТУС: НАБЛЮДАЕТ
+   ЗАМЕТКА: Он видит вас`,catReadme:`
+> СОДЕРЖИМОЕ README.md:
+   # ТЕРМИНАЛ MOKSHA
+   Добро пожаловать в пустоту.
+   Найдите выход.
+   Или не делайте этого.`,catNotFound:`
 > ОШИБКА: ФАЙЛ '{file}' НЕ НАЙДЕН
 > (ЭТО ВАЖНО?)`,scanError:`
 > ОШИБКА: Цель не указана для 'scan'. Попробуйте: scan <цель>`,scanRoom:`
@@ -547,7 +734,9 @@ Enter choice (1 or 2):`,languageSelected:"Language selected: {lang}"},ru:{intro:
 > СИСТЕМА: Иногда единственный выход - ничего не делать. Или стереть себя.`,realityCheckGlitch:"> СИСТЕМА: SuO -rf  /SF ... (попробуйте читать между строк)",hint3:`
 > ПОДСКАЗКА:
    ПОПРОБУЙТЕ 'scan room', 'scan wall', 'scan projector', 'scan bear', 'scan self', 'scan void', 'scan buddha', 'scan eye', 'scan user'...
-   (ИЛИ ПРОСТО ПОПРОБУЙТЕ СЛОВА)`,hint7:`
+   (ИЛИ ПРОСТО ПОПРОБУЙТЕ СЛОВА)`,hintScanUser:`
+> ПОДСКАЗКА:
+   ПОПРОБУЙТЕ 'scan user' - ЭТО МОЖЕТ РАСКРЫТЬ ЧТО-ТО ВАЖНОЕ О ВАШИХ ФАЙЛАХ...`,hint7:`
 > СИСТЕМНОЕ ПРЕДУПРЕЖДЕНИЕ:
    ВСЕ ДЕЙСТВИЯ ПРЕДСКАЗАНЫ
    ВАШИ 'ВЫБОРЫ' - ИЛЛЮЗИИ`,hint12:`
@@ -596,7 +785,64 @@ Enter choice (1 or 2):`,languageSelected:"Language selected: {lang}"},ru:{intro:
 1. English
 2. Русский
 
-Введите выбор (1 или 2):`,languageSelected:"Выбран язык: {lang}"}};function n(o,s={}){let i=U[y][o]||U.en[o]||o;for(const[c,l]of Object.entries(s))i=i.replace(new RegExp(`{${c}}`,"g"),l);return i}let L=!1,I=0,N=!1,R=null,d=0,g=null,M=0;const w=["secret.txt","passwords.docx","todo.md","bear.png","memories.zip","final_delete.exe","laughter.wav","photo_001.jpg","sacrifice.dll","karma.log","buddha.png","eye.dat","glitch.sys","README.md","system.log","bear.log","void.txt","error.log","wall.txt","projector.img"],Y=document.querySelector("#app");Y.innerHTML=`
+Введите выбор (1 или 2):`,languageSelected:"Выбран язык: {lang}",helpBasic:`
+> СПРАВКА ТЕРМИНАЛА MOKSHA
+--------------------------------
+ОСНОВНЫЕ КОМАНДЫ:
+  ls ................ список файлов
+  cat <файл> ........ читать файл
+  scan <цель> ..... анализировать объект
+  history .......... прошлые попытки
+  run .............. выполнить программу
+  sudo .............. получить доступ суперпользователя (требует пароль)
+
+> ПОДСКАЗКА:
+   ВЫ МОЖЕТЕ СКАНИРОВАТЬ ПОЧТИ ВСЕ:
+     scan room, scan bear, scan self, scan wall, scan projector, scan void, scan error, scan glitch, scan buddha,
+ scan eye, scan user, scan network
+   (ИЛИ НЕ ДЕЛАТЬ НИЧЕГО. ВЫБОР ЗА ВАМИ)
+
+> СИСТЕМНАЯ ЗАМЕТКА: Терминал может глючить. Команды могут не отвечать корректно с первого раза.
+`,helpSudo:`
+> СПРАВКА ТЕРМИНАЛА MOKSHA (ДОСТУП SUDO)
+--------------------------------
+ОСНОВНЫЕ КОМАНДЫ:
+  ls ................ список файлов
+  cat <файл> ........ читать файл
+  scan <цель> ..... анализировать объект
+  history .......... прошлые попытки
+  run .............. выполнить программу
+
+ПРОДВИНУТЫЕ:
+  sudo rm -rf /self ..... самоуничтожение
+  query --philosophy ....,. спросить систему
+
+КИБЕРНИРВАНА ДОПОЛНИТЕЛЬНО:
+  scan network ...... сканирование сети
+  whoami ............ показать информацию о пользователе/системе
+  reality check ..... фрагменты мета-реальности
+
+> ПОДСКАЗКА:
+   ВЫ МОЖЕТЕ СКАНИРОВАТЬ ПОЧТИ ВСЕ:
+     scan room, scan bear, scan self, scan wall, scan projector, scan void, scan error, scan glitch, scan buddha,
+ scan eye, scan user, scan network
+   (ИЛИ НЕ ДЕЛАТЬ НИЧЕГО. ВЫБОР ЗА ВАМИ)
+`,catPasswords:`
+> СОДЕРЖИМОЕ passwords.docx:
+   ИМЯ ПОЛЬЗОВАТЕЛЯ: admin
+   ПАРОЛЬ: LivingInTheVoid
+   ЗАМЕТКА: Используйте команду 'sudo' для доступа к продвинутым функциям
+   СТАТУС: АКТИВЕН`,sudoCommand:"sudo",sudoUsage:`
+> ИСПОЛЬЗОВАНИЕ: sudo <команда>
+> ПРИМЕР: sudo rm -rf /self`,sudoAccessGranted:`
+> ДОСТУП SUDO ПРЕДОСТАВЛЕН
+> Продвинутые команды теперь доступны. Введите 'help' чтобы увидеть все опции.`,sudoAccessDenied:`
+> ДОСТУП ЗАПРЕЩЕН
+> Неверный пароль или недостаточно привилегий.`,sudoPrompt:`
+> [sudo] пароль для пользователя: `,scanUserHintSudo:`
+> ПОДСКАЗКА: Проверьте ваши домашние файлы. Возможно, в passwords.docx есть что-то полезное...`,scanUserHintBasic:`
+> ПОДСКАЗКА: Ответ может быть ближе, чем вы думаете. Что если бы вы могли удалить себя из системы?`,fileWithoutCat:`
+> ОШИБКА: Для чтения файла '{file}' используйте команду 'cat {file}'`}};function n(a,t={}){let l=G[L][a]||G.en[a]||a;for(const[r,c]of Object.entries(t))l=l.replace(new RegExp(`{${r}}`,"g"),c);return l}let M=!1,p=0,g=!1,I=null,O=0,H=null,U=0,f=!1,C="LivingInTheVoid",y=!1;const k=["secret.txt","passwords.docx","todo.md","bear.png","memories.zip","final_delete.exe","laughter.wav","photo_001.jpg","sacrifice.dll","karma.log","buddha.png","eye.dat","glitch.sys","README.md","system.log","bear.log","void.txt","error.log","wall.txt","projector.img"],_=document.querySelector("#app");_.innerHTML=`
   <div id="terminal-container">
     <pre id="terminal-output"></pre>
     <div id="terminal-input-line" style="display:none;">
@@ -604,10 +850,11 @@ Enter choice (1 or 2):`,languageSelected:"Language selected: {lang}"},ru:{intro:
     </div>
   </div>
   <div id="glitch-overlay"></div>
-`;const O=document.getElementById("terminal-output"),_=document.getElementById("terminal-input-line"),a=document.getElementById("terminal-input"),m=document.getElementById("terminal-container");function t(o,s,i=8){const c=/^> TIP:.*$/m,l=/scan room, scan bear, scan self, scan wall, scan projector, scan void, scan error, scan glitch, scan buddha, scan eye, scan user, scan network/;let e=o.split(`
-`),r=0;function T(){if(r>=e.length){s&&s();return}let u=e[r],f=!1;if(c.test(u)){let h=document.createElement("span");h.className="term-tip",h.textContent=u,O.appendChild(h),O.appendChild(document.createElement("br")),f=!0}else if(l.test(u)){let h=document.createElement("span");h.className="term-cmdlist",h.textContent=u,O.appendChild(h),O.appendChild(document.createElement("br")),f=!0}if(f)r++,setTimeout(T,0);else{let p=function(){h<u.length?(O.textContent+=u[h++],setTimeout(p,i)):(O.textContent+=`
-`,setTimeout(()=>{r++,T()},0))};var A=p;let h=0;p();return}}T()}function E(o,s=.08,i=.02){const c=["#","@","%","$","&","*","!","?","0","1","Ξ","░","▒","▓"],l={a:"a̷",b:"b̸",c:"c̷",d:"d̸",e:"e̶",f:"f̷",g:"g̸",h:"h̷",i:"i̸",j:"j̷",k:"k̵",l:"l̷",m:"m̸",n:"n̸",o:"o̷",p:"p̸",q:"q̷",r:"r̸",s:"s̵",t:"t̷",u:"u̸",v:"v̷",w:"w̸",x:"x̷",y:"y̸",z:"z̷",A:"A̷",B:"B̸",C:"C̷",D:"D̸",E:"E̶",F:"F̷",G:"G̸",H:"H̷",I:"I̸",J:"J̷",K:"K̵",L:"L̷",M:"M̸",N:"N̸",O:"O̷",P:"P̸",Q:"Q̷",R:"R̸",S:"S̵",T:"T̷",U:"U̸",V:"V̷",W:"W̸",X:"X̷",Y:"Y̸",Z:"Z̷"};let e="";for(let r of o)/[a-zA-Z]/.test(r)&&Math.random()<i?e+=l[r]||r:/[a-zA-Z]/.test(r)&&Math.random()<s?e+=c[Math.floor(Math.random()*c.length)]:e+=r;return e}function G(o=180){m.classList.add("glitch-blur"),setTimeout(()=>m.classList.remove("glitch-blur"),o)}function P(o=180){m.classList.add("glitch-contrast"),setTimeout(()=>m.classList.remove("glitch-contrast"),o)}function v(o=120){m.classList.add("glitch-shadow"),setTimeout(()=>m.classList.remove("glitch-shadow"),o)}function F(o=120){m.classList.add("glitch-transform"),setTimeout(()=>m.classList.remove("glitch-transform"),o)}function b(o=120){const s=document.getElementById("glitch-overlay");s.innerHTML="",s.style.display="block",s.style.pointerEvents="none",s.style.position="absolute",s.style.left=m.offsetLeft+"px",s.style.top=m.offsetTop+"px",s.style.width=m.offsetWidth+"px",s.style.height=m.offsetHeight+"px";for(let i=0;i<3+Math.floor(Math.random()*3);i++){const c=document.createElement("div");c.className="glitch-block",c.style.top=Math.random()*100+"%",c.style.left=Math.random()*100+"%",c.style.width=20+Math.random()*60+"px",c.style.height=6+Math.random()*18+"px",c.style.background=`rgba(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${.18+Math.random()*.22})`,s.appendChild(c)}setTimeout(()=>{s.innerHTML="",s.style.display="none"},o)}function H(){const o=[G,P,v,F,b],s=2+Math.floor(Math.random()*3),i=o.sort(()=>.5-Math.random());for(let c=0;c<s;c++)i[c](220+Math.random()*100)}function B(){H()}function W(){t(n("languageSelect"),()=>{function o(s){(s.key==="1"||s.key==="2")&&(document.removeEventListener("keydown",o),y=s.key==="1"?"en":"ru",t(n("languageSelected",{lang:y==="en"?"English":"Русский"}),()=>{setTimeout(()=>{k()},1e3)},2))}document.addEventListener("keydown",o)},2)}function C(){const o=navigator.userAgentData&&navigator.userAgentData.platform?navigator.userAgentData.platform:navigator.platform||"unknown",s=navigator.userAgent||"unknown",i=`Browser JS ${navigator.appVersion}`,c=window.location.pathname,l=navigator.language||"unknown",e=`${window.screen.width}x${window.screen.height}`,T=new Date().toLocaleTimeString();return{username:o,os:s,python:i,cwd:c,lang:l,screenRes:e,time:T}}function k(){const o=C(),s=n("intro",{username:o.username,os:o.os,js:o.python,lang:o.lang,screen:o.screenRes,time:o.time,cwd:o.cwd});L=!1,t(s,()=>{function i(){document.removeEventListener("keydown",c),document.removeEventListener("click",l),_.style.display="",a.focus(),L=!0}function c(e){e.key==="Enter"&&i()}function l(){i()}document.addEventListener("keydown",c),document.addEventListener("click",l)},2)}W();a.addEventListener("keydown",o=>{if(o.key==="Enter"){if(!L){L=!0,a.value="";return}const s=a.value.trim().toLowerCase();if(N&&document.activeElement===a&&(s===""||s==="y"||s==="n")){N=!1,R&&clearTimeout(R),R=null,a.value="",a.focus(),s?s==="y"?t(n("confirmed"),()=>{t(n("sarcasm"),()=>{setTimeout(()=>{t(n("sarcasm2"),()=>{setTimeout(()=>{t(n("tryAgain"),()=>{askSelfDestruct()},2)},1e3)},2)},1e3)},2)},2):s==="n"&&t(n("cancelled"),()=>{t(n("cancelledHint"),()=>{t(n("cancelledHint2"),()=>{askSelfDestruct()},2)},2)},2):t(n("noResponse"),()=>{t(n("noResponseHint"),()=>{askSelfDestruct()},2)},2);return}const i=a.value;i.trim()!==""&&(O.textContent+=`> ${i}
-`),(Math.random()<.33||/run|delete|final|void|glitch|error|buddha|eye|sudo|reality|scan|cat|ls|history|philosophy|exit|meditate|whoami/i.test(i))&&H(),V(i),a.value="",d++,x(),D()}});function D(){g&&clearTimeout(g);const o=1e4+Math.random()*1e4;g=setTimeout(()=>{Math.random()<.35&&H();const s=n("idleMessages");M<s.length?t(E(`
-${s[M]}`,.08,.04),()=>{M++,D()},4):t(E(`
-${s[s.length-1]}`,.08,.04),D,4)},o)}function x(){d===3&&t(n("hint3")),d===7&&t(n("hint7")),d===12&&t(n("hint12")),d===16&&t(n("hint16")),d===20&&t(n("hint20"))}function V(o){const s=o.trim().toLowerCase();if(!s)return;if(s==="help"){const e=n("help");t(e,()=>a.focus(),2);return}if(s==="ls"){const e=n("lsOutput");t(e,()=>a.focus(),2);return}if(s.startsWith("cat")){const e=s.slice(3).trim().toLowerCase();e?e.includes("bear")?t(n("catBear"),()=>a.focus(),2):e.includes("memories")?t(n("catMemories"),()=>a.focus(),2):e.includes("system")?t(n("catSystem"),()=>{t(n("catSystemHint"),()=>{t(n("catSystemGlitch"),()=>a.focus(),2)},2)},2):e==="laughter.wav"?t(n("catLaughter"),()=>a.focus(),2):e==="photo_001.jpg"?t(n("catPhoto"),()=>a.focus(),2):t(n("catNotFound",{file:e}),()=>a.focus(),2):t(n("catError"),()=>a.focus(),2);return}if(s.startsWith("scan")){const e=s.slice(4).trim();if(!e)t(n("scanError"),()=>a.focus(),2);else if(e==="room")t(n("scanRoom"),()=>a.focus(),2);else if(e==="bear")t(n("scanBear"),()=>a.focus(),2);else if(e==="self"){t(n("scanSelf"),()=>{t(n("scanSelfHint"),()=>{t(n("scanSelfGlitch"),()=>a.focus(),2)},2)},2);return}else if(e==="wall"){let r="";d>4&&(r=n("scanWallHint")),t(n("scanWall")+r,()=>{t(n("scanWallSystem"),()=>a.focus(),2)},2);return}else if(e==="projector")t(n("scanProjector"),()=>a.focus(),2);else if(e==="void")t(n("scanVoid"),()=>a.focus(),2);else if(e==="error")t(n("scanError"),()=>a.focus(),2);else if(e==="glitch")t(n("scanGlitch"),()=>a.focus(),2);else if(e==="buddha")t(n("scanBuddha"),()=>a.focus(),2);else if(e==="eye")t(n("scanEye"),()=>a.focus(),2);else if(e==="user"){const r=C();let T=w.slice().sort(()=>.5-Math.random()).slice(0,5+Math.floor(Math.random()*3));t(n("scanUser",{username:r.username,os:r.os,js:r.python,lang:r.lang,screen:r.screenRes,cwd:r.cwd,files:T.join(", ")}),()=>{t(n("scanUserHint"),()=>{t(n("scanUserGlitch"),()=>a.focus(),2)},2)},2);return}if(e==="network"){let r="192.168.1.",T=[];for(let f=2;f<2+Math.floor(Math.random()*3)+2;f++){let A=Math.random()>.3?"Active":"Inactive";T.push(`   - ${r}${f} - ${A}`)}let u=n("scanNetwork",{hosts:T.join(`
-`)});t(u,()=>a.focus(),2)}else e==="laughter.wav"?t(n("scanLaughter"),()=>a.focus(),2):t(n("scanUnknown",{target:e}),()=>a.focus(),2);return}if(s==="history"){t(n("history"),()=>a.focus(),2);return}if(s==="run final_delete.exe"){t(n("runFinalDelete"),()=>a.focus(),2);return}if(s==="sudo rm -rf /self"){I++,i();return}function i(){let e="";I===2?e=n("selfDestructHint2"):I===3?e=n("selfDestructHint3"):I>=4&&(e=n("selfDestructHint4")),t(n("selfDestruct")+e,()=>{c()},2)}function c(){R&&clearTimeout(R),a.disabled=!1,a.value="",a.focus(),N=!0,R=setTimeout(()=>{N&&(N=!1,R=null,t(n("cybernirvana"),()=>{setTimeout(()=>{t(n("sessionEnded"),()=>{setTimeout(()=>{window.close(),Y.innerHTML=`<div style="color:#fff;text-align:center;margin-top:20vh;font-size:2em;">${n("sessionClosed")}</div>`},1200)},2)},2e3)},2))},15e3)}if(s==="query --philosophy"){let e="";d>5&&(e=n("philosophyHint")),t(n("philosophy")+e,()=>{t(E(n("philosophyGlitch"),.11,.07),()=>a.focus(),2)},2);return}if(s==="meditate"){t(n("meditate"),()=>a.focus(),2);return}if(s==="exit"){t(n("exit"),()=>a.focus(),2);return}if(s==="whoami"){const e=C();t(n("whoami",{username:e.username,os:e.os,js:e.python,lang:e.lang,screen:e.screenRes}),()=>a.focus(),2);return}if(s==="reality check"){t(n("realityCheck",{time:new Date().toLocaleTimeString()}),()=>{t(E(n("realityCheckGlitch"),.13,.09),()=>a.focus(),2)},2);return}if(Math.random()<.03){const e=y==="ru"?["Вы в симуляции.","Ваш реальный IP: 127.0.0.1",`Текущее время: ${new Date().toLocaleTimeString()}`,"Эта игра следит за вами.","Ваши файлы могут быть небезопасны."]:["You are in a simulation.","Your real IP: 127.0.0.1",`Current time: ${new Date().toLocaleTimeString()}`,"This game is watching you.","Your files may not be safe."];let r=()=>{setTimeout(()=>{t(n("tip"))},400)};const T=[()=>S(E(n("systemInterrupt"),.18,.12),()=>{t(n("eye"),()=>{S(E(n("itWatching"),.12,.08),r,2)},2)},2),()=>S(E(n("systemWatching"),.1,.07),r,2),()=>S(E(n("realityCheckFailed"),.14,.09),r,2),()=>S(E(n("systemFiles"),.13,.09),r,2),()=>S(E(n("systemCuriosity"),.11,.08),r,2),()=>{var u=n("systemHostname",{hostname:"localhost",ip:"127.0.0.1",screen:window.screen.width+"x"+window.screen.height});S(E(u,.09,.07),r,2)},()=>{const u=e.sort(()=>.5-Math.random()).slice(0,2);function f(A){if(A>=u.length){setTimeout(r,400);return}S(E(u[A],.1,.07),()=>f(A+1),2)}f(0)},()=>S(n("systemArtifact"),r,2),()=>S(n("cyberBear"),r,2),()=>S(E(n("voidEcho",{cmd:o.toUpperCase()}),.12,.08),r,2),()=>S(E(n("errorUnknown",{cmd:o.toUpperCase()}),.09,.06),r,2)];T[Math.floor(Math.random()*T.length)]();return}B(),t(n("errorUnknown",{cmd:o}),()=>{setTimeout(()=>{t(n("tip"))},400)},2)}function S(o,s,i=8){t(o,s,i)}if(typeof document<"u"){const o=document.createElement("style");o.textContent=".shake { animation: shake 0.3s; }",document.head.appendChild(o)}
+`;const N=document.getElementById("terminal-output"),b=document.getElementById("terminal-input-line"),s=document.getElementById("terminal-input"),h=document.getElementById("terminal-container");function e(a,t,l=8){const r=/^> TIP:.*$/m,c=/scan room, scan bear, scan self, scan wall, scan projector, scan void, scan error, scan glitch, scan buddha, scan eye, scan user, scan network/;let E=a.split(`
+`),T=0;function o(){if(T>=E.length){t&&t();return}let i=E[T],m=!1;if(r.test(i)){let u=document.createElement("span");u.className="term-tip",u.textContent=i,N.appendChild(u),N.appendChild(document.createElement("br")),m=!0}else if(c.test(i)){let u=document.createElement("span");u.className="term-cmdlist",u.textContent=i,N.appendChild(u),N.appendChild(document.createElement("br")),m=!0}if(m)T++,setTimeout(o,0);else{let R=function(){u<i.length?(N.textContent+=i[u++],setTimeout(R,l)):(N.textContent+=`
+`,setTimeout(()=>{T++,o()},0))};var A=R;let u=0;R();return}}o()}function d(a,t=.08,l=.02){const r=["#","@","%","$","&","*","!","?","0","1","Ξ","░","▒","▓"],c={a:"a̷",b:"b̸",c:"c̷",d:"d̸",e:"e̶",f:"f̷",g:"g̸",h:"h̷",i:"i̸",j:"j̷",k:"k̵",l:"l̷",m:"m̸",n:"n̸",o:"o̷",p:"p̸",q:"q̷",r:"r̸",s:"s̵",t:"t̷",u:"u̸",v:"v̷",w:"w̸",x:"x̷",y:"y̸",z:"z̷",A:"A̷",B:"B̸",C:"C̷",D:"D̸",E:"E̶",F:"F̷",G:"G̸",H:"H̷",I:"I̸",J:"J̷",K:"K̵",L:"L̷",M:"M̸",N:"N̸",O:"O̷",P:"P̸",Q:"Q̷",R:"R̸",S:"S̵",T:"T̷",U:"U̸",V:"V̷",W:"W̸",X:"X̷",Y:"Y̸",Z:"Z̷"};let E="";for(let T of a)/[a-zA-Z]/.test(T)&&Math.random()<l?E+=c[T]||T:/[a-zA-Z]/.test(T)&&Math.random()<t?E+=r[Math.floor(Math.random()*r.length)]:E+=T;return E}function B(a=180){h.classList.add("glitch-blur"),setTimeout(()=>h.classList.remove("glitch-blur"),a)}function F(a=180){h.classList.add("glitch-contrast"),setTimeout(()=>h.classList.remove("glitch-contrast"),a)}function x(a=120){h.classList.add("glitch-shadow"),setTimeout(()=>h.classList.remove("glitch-shadow"),a)}function W(a=120){h.classList.add("glitch-transform"),setTimeout(()=>h.classList.remove("glitch-transform"),a)}function V(a=120){const t=document.getElementById("glitch-overlay");t.innerHTML="",t.style.display="block",t.style.pointerEvents="none",t.style.position="absolute",t.style.left=h.offsetLeft+"px",t.style.top=h.offsetTop+"px",t.style.width=h.offsetWidth+"px",t.style.height=h.offsetHeight+"px";for(let l=0;l<3+Math.floor(Math.random()*3);l++){const r=document.createElement("div");r.className="glitch-block",r.style.top=Math.random()*100+"%",r.style.left=Math.random()*100+"%",r.style.width=20+Math.random()*60+"px",r.style.height=6+Math.random()*18+"px",r.style.background=`rgba(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${.18+Math.random()*.22})`,t.appendChild(r)}setTimeout(()=>{t.innerHTML="",t.style.display="none"},a)}function Y(){const a=[B,F,x,W,V],t=2+Math.floor(Math.random()*3),l=a.sort(()=>.5-Math.random());for(let r=0;r<t;r++)l[r](220+Math.random()*100)}function K(){Y()}function j(){e(n("languageSelect"),()=>{function a(t){(t.key==="1"||t.key==="2")&&(document.removeEventListener("keydown",a),L=t.key==="1"?"en":"ru",e(n("languageSelected",{lang:L==="en"?"English":"Русский"}),()=>{setTimeout(()=>{X()},1e3)},2))}document.addEventListener("keydown",a)},2)}function w(){const a=navigator.userAgentData&&navigator.userAgentData.platform?navigator.userAgentData.platform:navigator.platform||"unknown",t=navigator.userAgent||"unknown",l=`Browser JS ${navigator.appVersion}`,r=window.location.pathname,c=navigator.language||"unknown",E=`${window.screen.width}x${window.screen.height}`,o=new Date().toLocaleTimeString();return{username:a,os:t,python:l,cwd:r,lang:c,screenRes:E,time:o}}function X(){const a=w(),t=n("intro",{username:a.username,os:a.os,js:a.python,lang:a.lang,screen:a.screenRes,time:a.time,cwd:a.cwd});M=!1,e(t,()=>{function l(){document.removeEventListener("keydown",r),document.removeEventListener("click",c),b.style.display="",s.focus(),M=!0}function r(E){E.key==="Enter"&&l()}function c(){l()}document.addEventListener("keydown",r),document.addEventListener("click",c)},2)}j();s.addEventListener("keydown",a=>{if(a.key==="Enter"){if(!M){M=!0,s.value="";return}const t=s.value.trim().toLowerCase();if(g&&document.activeElement===s&&(t===""||t==="y"||t==="n")){g=!1,I&&clearTimeout(I),I=null,s.value="",s.focus(),t?t==="y"?e(n("confirmed"),()=>{e(n("sarcasm"),()=>{setTimeout(()=>{e(n("sarcasm2"),()=>{setTimeout(()=>{e(n("tryAgain"),()=>{askSelfDestruct()},2)},1e3)},2)},1e3)},2)},2):t==="n"&&e(n("cancelled"),()=>{e(n("cancelledHint"),()=>{e(n("cancelledHint2"),()=>{askSelfDestruct()},2)},2)},2):e(n("noResponse"),()=>{e(n("noResponseHint"),()=>{askSelfDestruct()},2)},2);return}if(y){console.log("Sudo prompt active, processing password input");const r=s.value;r.trim()!==""&&(N.textContent+=`> ${r}
+`),v(r),s.value="",O++,P(),D();return}const l=s.value;l.trim()!==""&&(N.textContent+=`> ${l}
+`),(Math.random()<.33||/run|delete|final|void|glitch|error|buddha|eye|sudo|reality|scan|cat|ls|history|philosophy|exit|meditate|whoami/i.test(l))&&Y(),v(l),s.value="",O++,P(),D()}});function D(){H&&clearTimeout(H);const a=1e4+Math.random()*1e4;H=setTimeout(()=>{Math.random()<.35&&Y();const t=n("idleMessages");U<t.length?e(d(`
+${t[U]}`,.08,.04),()=>{U++,D()},4):e(d(`
+${t[t.length-1]}`,.08,.04),D,4)},a)}function P(){O===3&&e(n("hint3")),O===5&&!f&&e(n("hintScanUser")),O===7&&e(n("hint7")),O===12&&e(n("hint12")),O===16&&e(n("hint16")),O===20&&e(n("hint20"))}function v(a){const t=a.trim().toLowerCase();if(!t)return;if([".txt",".docx",".md",".log",".wav",".jpg",".png",".dll",".exe",".sys",".dat",".zip"].some(o=>t.includes(o))&&!t.startsWith("cat ")){e(n("fileWithoutCat",{file:t}),()=>s.focus(),2);return}if(t==="help"){const o=n(f?"helpSudo":"helpBasic");e(o,()=>s.focus(),2);return}if(t==="ls"){const o=n("lsOutput");e(o,()=>s.focus(),2);return}if(t.startsWith("cat")){const o=t.slice(3).trim().toLowerCase();o?o.includes("bear")?e(n("catBear"),()=>s.focus(),2):o.includes("memories")?e(n("catMemories"),()=>s.focus(),2):o.includes("system")?e(n("catSystem"),()=>{e(n("catSystemHint"),()=>{e(n("catSystemGlitch"),()=>s.focus(),2)},2)},2):o==="laughter.wav"?e(n("catLaughter"),()=>s.focus(),2):o==="photo_001.jpg"?e(n("catPhoto"),()=>s.focus(),2):o==="passwords.docx"?e(n("catPasswords"),()=>s.focus(),2):o==="secret.txt"?e(n("catSecret"),()=>s.focus(),2):o==="todo.md"?e(n("catTodo"),()=>s.focus(),2):o==="karma.log"?e(n("catKarma"),()=>s.focus(),2):o==="sacrifice.dll"?e(n("catSacrifice"),()=>s.focus(),2):o==="bear.png"?e(n("catBear"),()=>s.focus(),2):o==="memories.zip"?e(n("catMemoriesZip"),()=>s.focus(),2):o==="projector.img"?e(n("catProjector"),()=>s.focus(),2):o==="void.txt"?e(n("catVoid"),()=>s.focus(),2):o==="final_delete.exe"?e(n("catFinalDelete"),()=>s.focus(),2):o==="error.log"?e(n("catErrorLog"),()=>s.focus(),2):o==="wall.txt"?e(n("catWall"),()=>s.focus(),2):o==="glitch.sys"?e(n("catGlitch"),()=>s.focus(),2):o==="buddha.png"?e(n("catBuddha"),()=>s.focus(),2):o==="eye.dat"?e(n("catEye"),()=>s.focus(),2):o==="README.md"?e(n("catReadme"),()=>s.focus(),2):e(n("catNotFound",{file:o}),()=>s.focus(),2):e(n("catError"),()=>s.focus(),2);return}if(t.startsWith("scan")){const o=t.slice(4).trim();if(!o)e(n("scanError"),()=>s.focus(),2);else if(o==="room")e(n("scanRoom"),()=>s.focus(),2);else if(o==="bear")e(n("scanBear"),()=>s.focus(),2);else if(o==="self"){e(n("scanSelf"),()=>{e(n("scanSelfHint"),()=>{e(n("scanSelfGlitch"),()=>s.focus(),2)},2)},2);return}else if(o==="wall"){let i="";O>4&&(i=n("scanWallHint")),e(n("scanWall")+i,()=>{e(n("scanWallSystem"),()=>s.focus(),2)},2);return}else if(o==="projector")e(n("scanProjector"),()=>s.focus(),2);else if(o==="void")e(n("scanVoid"),()=>s.focus(),2);else if(o==="error")e(n("scanError"),()=>s.focus(),2);else if(o==="glitch")e(n("scanGlitch"),()=>s.focus(),2);else if(o==="buddha")e(n("scanBuddha"),()=>s.focus(),2);else if(o==="eye")e(n("scanEye"),()=>s.focus(),2);else if(o==="user"){const i=w();let m=k.slice().sort(()=>.5-Math.random()).slice(0,4+Math.floor(Math.random()*3));m.push("passwords.docx"),e(n("scanUser",{username:i.username,os:i.os,js:i.python,lang:i.lang,screen:i.screenRes,cwd:i.cwd,files:m.join(", ")}),()=>{const A=n(f?"scanUserHintSudo":"scanUserHintBasic");e(A,()=>{e(n("scanUserGlitch"),()=>s.focus(),2)},2)},2);return}if(o==="network"){if(!f){e(n("errorUnknown",{cmd:`scan ${o}`}),()=>s.focus(),2);return}let i="192.168.1.",m=[];for(let u=2;u<2+Math.floor(Math.random()*3)+2;u++){let R=Math.random()>.3?"Active":"Inactive";m.push(`   - ${i}${u} - ${R}`)}let A=n("scanNetwork",{hosts:m.join(`
+`)});e(A,()=>s.focus(),2)}else o==="laughter.wav"?e(n("scanLaughter"),()=>s.focus(),2):e(n("scanUnknown",{target:o}),()=>s.focus(),2);return}if(t==="history"){e(n("history"),()=>s.focus(),2);return}if(t==="run final_delete.exe"){e(n("runFinalDelete"),()=>s.focus(),2);return}if(t==="sudo")if(console.log("Sudo command detected, current access:",f),f){e(n("sudoUsage"),()=>s.focus(),2);return}else{console.log("Requesting sudo password"),e(n("sudoPrompt"),()=>{y=!0,console.log("Sudo prompt active set to true"),s.value="",s.focus()},2);return}if(t.startsWith("sudo "))if(f)if(t.slice(5)==="rm -rf /self"){p++,c();return}else{e(n("sudoUsage"),()=>s.focus(),2);return}else{e(n("sudoPrompt"),()=>{y=!0,s.value="",s.focus()},2);return}if(y){y=!1,console.log("Sudo password check:",t,"expected:",C,"match:",t===C),t===C||t===C.toLowerCase()?(f=!0,console.log("Sudo access granted!"),e(n("sudoAccessGranted"),()=>s.focus(),2)):(console.log("Sudo access denied!"),e(n("sudoAccessDenied"),()=>s.focus(),2));return}if(t==="sudo rm -rf /self"){p++,c();return}function c(){let o="";p===2?o=n("selfDestructHint2"):p===3?o=n("selfDestructHint3"):p>=4&&(o=n("selfDestructHint4")),e(n("selfDestruct")+o,()=>{E()},2)}function E(){I&&clearTimeout(I),s.disabled=!1,s.value="",s.focus(),g=!0,I=setTimeout(()=>{g&&(g=!1,I=null,e(n("cybernirvana"),()=>{setTimeout(()=>{e(n("sessionEnded"),()=>{setTimeout(()=>{window.close(),_.innerHTML=`<div style="color:#fff;text-align:center;margin-top:20vh;font-size:2em;">${n("sessionClosed")}</div>`},1200)},2)},2e3)},2))},15e3)}if(t==="query --philosophy"){if(!f){e(n("errorUnknown",{cmd:t}),()=>s.focus(),2);return}let o="";O>5&&(o=n("philosophyHint")),e(n("philosophy")+o,()=>{e(d(n("philosophyGlitch"),.11,.07),()=>s.focus(),2)},2);return}if(t==="meditate"){if(!f){e(n("errorUnknown",{cmd:t}),()=>s.focus(),2);return}e(n("meditate"),()=>s.focus(),2);return}if(t==="exit"){if(!f){e(n("errorUnknown",{cmd:t}),()=>s.focus(),2);return}e(n("exit"),()=>s.focus(),2);return}if(t==="whoami"){if(!f){e(n("errorUnknown",{cmd:t}),()=>s.focus(),2);return}const o=w();e(n("whoami",{username:o.username,os:o.os,js:o.python,lang:o.lang,screen:o.screenRes}),()=>s.focus(),2);return}if(t==="reality check"){if(!f){e(n("errorUnknown",{cmd:t}),()=>s.focus(),2);return}e(n("realityCheck",{time:new Date().toLocaleTimeString()}),()=>{e(d(n("realityCheckGlitch"),.13,.09),()=>s.focus(),2)},2);return}if(Math.random()<.12){const o=L==="ru"?["Вы в симуляции.","Ваш реальный IP: 127.0.0.1",`Текущее время: ${new Date().toLocaleTimeString()}`,"Эта игра следит за вами.","Ваши файлы могут быть небезопасны."]:["You are in a simulation.","Your real IP: 127.0.0.1",`Current time: ${new Date().toLocaleTimeString()}`,"This game is watching you.","Your files may not be safe."];let i=()=>{setTimeout(()=>{e(n("tip"))},400)};const m=[()=>S(d(n("systemInterrupt"),.05,.02),()=>{e(n("eye"),()=>{S(d(n("itWatching"),.04,.01),i,2)},2)},2),()=>S(d(n("systemWatching"),.03,.01),i,2),()=>S(d(n("realityCheckFailed"),.04,.02),i,2),()=>S(d(n("systemFiles"),.03,.01),i,2),()=>S(d(n("systemCuriosity"),.03,.01),i,2),()=>{var A=n("systemHostname",{hostname:"localhost",ip:"127.0.0.1",screen:window.screen.width+"x"+window.screen.height});S(d(A,.02,.01),i,2)},()=>{const A=o.sort(()=>.5-Math.random()).slice(0,2);function u(R){if(R>=A.length){setTimeout(i,400);return}S(d(A[R],.03,.01),()=>u(R+1),2)}u(0)},()=>S(n("systemArtifact"),i,2),()=>S(n("cyberBear"),i,2),()=>S(d(n("voidEcho",{cmd:a.toUpperCase()}),.04,.02),i,2),()=>S(d(n("errorUnknown",{cmd:a.toUpperCase()}),.03,.01),i,2)];m[Math.floor(Math.random()*m.length)]();return}K(),e(n("errorUnknown",{cmd:a}),()=>{setTimeout(()=>{e(n("tip"))},400)},2)}function S(a,t,l=8){e(a,t,l)}if(typeof document<"u"){const a=document.createElement("style");a.textContent=".shake { animation: shake 0.3s; }",document.head.appendChild(a)}

@@ -188,16 +188,21 @@ html, body {
   align-items: center;
   background: #000;
   box-sizing: border-box;
+  padding: 16px;
+  overflow: hidden;
 }
 
 /* Terminal output area */
 /* Responsive terminal output */
 #terminal-output {
-  width: 100vw;
+  width: 100%;
   max-width: 900px;
   min-height: 60vh;
   background: #000;
   color: #e0e0e0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
   font-size: 1.1em;
   border-radius: 8px;
   padding: 2em 1.5em 1em 1.5em;
@@ -303,16 +308,18 @@ html, body {
   border: none;
   outline: none;
   font-size: 1.1em;
-  padding: 2px 12px;
+  padding: 2px 1em;
   border-radius: 4px;
-  margin-left: 4px;
-  min-width: 80%;
-  width: 96%;
+  margin: 0;
+  width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   transition: box-shadow 0.2s;
   position: relative;
   z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
 #terminal-input:focus {
@@ -341,10 +348,10 @@ html, body {
   font-size: 1.2em;
   font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
   padding: 0.6em 1em;
-  margin-left: 0.5em;
+  margin: 0;
   box-sizing: border-box;
   border-radius: 6px;
-  width: 99%;
+  width: calc(100% - 2em);
   min-width: 0;
   transition: box-shadow 0.2s;
   position: relative;
@@ -377,14 +384,42 @@ html, body {
 }
 
 @media (max-width: 600px) {
-  #terminal-output, #terminal-input-line {
-    max-width: 100vw;
-    padding: 1em 0.5em 0.5em 0.5em;
-    font-size: 1em;
+  #terminal-container {
+    padding: 8px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
   }
+  
+  #terminal-output, #terminal-input-line {
+    font-size: 0.8em;
+    padding: 4px;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  
   #terminal-input {
-    font-size: 1em;
-    padding: 0.5em 0.5em;
+    font-size: 0.8em;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  #terminal-output {
+    min-height: 50vh;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  
+  /* Language selection buttons on mobile */
+  #lang-en, #lang-ru {
+    font-size: 18px !important;
+    padding: 15px 25px !important;
+    margin: 8px !important;
+    min-width: 120px;
+    touch-action: manipulation;
   }
 }
 
@@ -452,6 +487,18 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Language selection button styles */
+#lang-en:hover, #lang-ru:hover {
+  background: #444 !important;
+  border-color: #888 !important;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+#lang-en:active, #lang-ru:active {
+  transform: scale(0.95);
 }
 
 @media (prefers-color-scheme: light) {
