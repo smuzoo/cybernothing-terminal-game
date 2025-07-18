@@ -7,11 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "clean": "rm -rf node_modules package-lock.json && npm install"
+    "clean": "if exist node_modules rmdir /s /q node_modules && if exist package-lock.json del package-lock.json && npm install",
+    "clean:unix": "rm -rf node_modules package-lock.json && npm install"
   },
   "devDependencies": {
-    "vite": "^7.0.4",
-    "@rollup/rollup-linux-x64-gnu": "4.9.5"
+    "@rollup/rollup-linux-x64-gnu": "^4.9.5",
+    "vite": "^7.0.4"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.9.5"
