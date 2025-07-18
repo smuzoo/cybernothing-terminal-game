@@ -31,8 +31,23 @@ const translations = {
     catSystemHint: "\n> SYSTEM: The logs repeat, but the true ending requires a different kind of deletion...",
     catSystemGlitch: "> SYSTEM HINT: Sometimes, the answer is hidden in plain sight: S_U_DooO  R_  -rf  /SF",
     catLaughter: "\n> LAUGHTER.WAV:\n   [CORRUPTED LAUGHTER]\n   SPECTRUM: NON-HUMAN\n   SYSTEM: FILE CANNOT BE DELETED\n   NOTE: IT SOUNDS LIKE YOU...\n   > HINT: Some things cannot be deleted by normal means.",
-    catPhoto: "\n> PHOTO_001.JPG:\n   [GLITCHED IMAGE: CHILD, BEAR, WALL]\n   FRAGMENTED, 38% RECOVERED\n   > REALITY CHECK: What you see is not always what is real.\n   > SYSTEM: Sometimes, to erase a memory, you must erase yourself.\n   (But how?)",
-    catNotFound: "\n> ERROR: FILE '{file}' NOT FOUND\n> (DOES IT MATTER?)",
+         catPhoto: "\n> PHOTO_001.JPG:\n   [GLITCHED IMAGE: CHILD, BEAR, WALL]\n   FRAGMENTED, 38% RECOVERED\n   > REALITY CHECK: What you see is not always what is real.\n   > SYSTEM: Sometimes, to erase a memory, you must erase yourself.\n   (But how?)",
+     catSecret: "\n> secret.txt CONTENT:\n   'The truth is hidden in plain sight'\n   'Look deeper than the surface'\n   'The answer lies within'",
+     catTodo: "\n> todo.md CONTENT:\n   - [ ] Find the exit\n   - [ ] Understand the system\n   - [ ] Achieve enlightenment\n   - [x] Enter the terminal",
+     catKarma: "\n> karma.log CONTENT:\n   KARMA LEVEL: 0\n   STATUS: RESET\n   NOTE: All debts cleared",
+     catSacrifice: "\n> sacrifice.dll CONTENT:\n   [BINARY DATA]\n   FUNCTION: SELF_DELETION\n   STATUS: LOCKED\n   NOTE: Required for final_delete.exe",
+     catBear: "\n> bear.png CONTENT:\n   [IMAGE: ROBOT BEAR]\n   STATUS: HEADLESS\n   NOTE: Emotional anchor, now broken",
+     catMemoriesZip: "\n> memories.zip CONTENT:\n   [COMPRESSED DATA]\n   STATUS: CORRUPTED\n   NOTE: Cannot be extracted",
+     catProjector: "\n> projector.img CONTENT:\n   [HOLOGRAM DATA]\n   STATUS: FLICKERING\n   NOTE: Shows unknown child with torn kimono",
+     catVoid: "\n> void.txt CONTENT:\n   'The void stares back'\n   'Nothing is everything'\n   'Emptiness is full'",
+     catFinalDelete: "\n> final_delete.exe CONTENT:\n   [EXECUTABLE DATA]\n   STATUS: LOCKED\n   NOTE: Requires sacrifice.dll to run",
+     catErrorLog: "\n> error.log CONTENT:\n   ERROR: ERROR\n   ERROR: ERROR\n   ERROR: ERROR\n   [LOOP DETECTED]",
+     catWall: "\n> wall.txt CONTENT:\n   '127 → 128'\n   'You will not disappear'\n   'Scratches: countless'",
+     catGlitch: "\n> glitch.sys CONTENT:\n   [SYSTEM GLITCH]\n   STATUS: UNSTABLE\n   NOTE: Reality distortion detected",
+     catBuddha: "\n> buddha.png CONTENT:\n   [IMAGE: BUDDHA-GLITCH]\n   STATUS: FRAGMENTED\n   NOTE: Enlightenment: 404",
+     catEye: "\n> eye.dat CONTENT:\n   [EYE DATA]\n   STATUS: WATCHING\n   NOTE: It sees you",
+     catReadme: "\n> README.md CONTENT:\n   # MOKSHA TERMINAL\n   Welcome to the void.\n   Find your way out.\n   Or don't.",
+     catNotFound: "\n> ERROR: FILE '{file}' NOT FOUND\n> (DOES IT MATTER?)",
     
     // Scan commands
     scanError: "\n> ERROR: No target specified for 'scan'. Try: scan <target>",
@@ -87,9 +102,10 @@ const translations = {
     realityCheck: "\n> REALITY CHECK:\n   - You are in a simulation.\n   - Your real IP: 127.0.0.1\n   - Current time: {time}\n   - This game is watching you.\n   - Your files may not be safe.\n> SYSTEM: Sometimes, the only way out is to do... nothing. Or to erase yourself.",
     realityCheckGlitch: "> SYSTEM: SuO -rf  /SF ... (try to read between the lines)",
     
-    // Hints and tips
-    hint3: "\n> HINT:\n   TRY 'scan room', 'scan wall', 'scan projector', 'scan bear', 'scan self', 'scan void', 'scan buddha', 'scan eye', 'scan user'...\n   (OR JUST TRY WORDS)",
-    hint7: "\n> SYSTEM ALERT:\n   ALL ACTIONS PREDICTED\n   YOUR 'CHOICES' ARE ILLUSIONS",
+         // Hints and tips
+     hint3: "\n> HINT:\n   TRY 'scan room', 'scan wall', 'scan projector', 'scan bear', 'scan self', 'scan void', 'scan buddha', 'scan eye', 'scan user'...\n   (OR JUST TRY WORDS)",
+     hintScanUser: "\n> HINT:\n   TRY 'scan user' - IT MIGHT REVEAL SOMETHING IMPORTANT ABOUT YOUR FILES...",
+     hint7: "\n> SYSTEM ALERT:\n   ALL ACTIONS PREDICTED\n   YOUR 'CHOICES' ARE ILLUSIONS",
     hint12: "\n> SYSTEM: Sometimes, the only way out is to do... nothing.",
     hint16: "\n> SYSTEM: The final gesture is the refusal to gesture.",
     hint20: "\n> SYSTEM: You are close. But not here. FIND the final question and...",
@@ -113,7 +129,20 @@ const translations = {
      
      // Language selection
      languageSelect: "SELECT LANGUAGE / ВЫБЕРИТЕ ЯЗЫК:\n\n1. English\n2. Русский\n\nEnter choice (1 or 2):",
-     languageSelected: "Language selected: {lang}"
+     languageSelected: "Language selected: {lang}",
+     
+     // Sudo system
+     helpBasic: `\n> MOKSHA TERMINAL HELP\n--------------------------------\nCORE COMMANDS:\n  ls ................ list files\n  cat <file> ........ read file\n  scan <target> ..... analyze object\n  history .......... past attempts\n  run .............. execute program\n  sudo .............. get superuser access (requires password)\n\n> TIP:\n   YOU CAN SCAN ALMOST ANYTHING:\n     scan room, scan bear, scan self, scan wall, scan projector, scan void, scan error, scan glitch, scan buddha,\n scan eye, scan user, scan network\n   (OR DON'T DO ANYTHING. THE CHOICE IS YOURS)\n\n> SYSTEM NOTE: Terminal may glitch. Commands may not respond correctly on first try.\n`,
+     helpSudo: `\n> MOKSHA TERMINAL HELP (SUDO ACCESS)\n--------------------------------\nCORE COMMANDS:\n  ls ................ list files\n  cat <file> ........ read file\n  scan <target> ..... analyze object\n  history .......... past attempts\n  run .............. execute program\n\nADVANCED:\n  sudo rm -rf /self ..... self-destruct\n  query --philosophy ....,. ask system\n\nCYBERNIRVANA EXTRAS:\n  scan network ...... network scan\n  whoami ............ show user/system info\n  reality check ..... meta reality fragments\n\n> TIP:\n   YOU CAN SCAN ALMOST ANYTHING:\n     scan room, scan bear, scan self, scan wall, scan projector, scan void, scan error, scan glitch, scan buddha,\n scan eye, scan user, scan network\n   (OR DON'T DO ANYTHING. THE CHOICE IS YOURS)\n`,
+     catPasswords: "\n> passwords.docx CONTENT:\n   USERNAME: admin\n   PASSWORD: LivingInTheVoid\n   NOTE: Use 'sudo' command to access advanced features\n   STATUS: ACTIVE",
+     sudoCommand: "sudo",
+     sudoUsage: "\n> USAGE: sudo <command>\n> EXAMPLE: sudo rm -rf /self",
+     sudoAccessGranted: "\n> SUDO ACCESS GRANTED\n> Advanced commands now available. Type 'help' to see all options.",
+     sudoAccessDenied: "\n> ACCESS DENIED\n> Incorrect password or insufficient privileges.",
+     sudoPrompt: "\n> [sudo] password for user: ",
+     scanUserHintSudo: "\n> HINT: Check your home files. There might be something useful in passwords.docx...",
+     scanUserHintBasic: "\n> HINT: The answer may be closer than you think. What if you could remove yourself from the system?",
+     fileWithoutCat: "\n> ERROR: To read file '{file}', use 'cat {file}' command"
   },
   
   ru: {
@@ -143,8 +172,23 @@ const translations = {
     catSystemHint: "\n> СИСТЕМА: Логи повторяются, но истинное завершение требует другого вида удаления...",
     catSystemGlitch: "> ПОДСКАЗКА СИСТЕМЫ: Иногда ответ скрыт на виду: S_U_DooO  R_  -rf  /SF",
     catLaughter: "\n> LAUGHTER.WAV:\n   [ПОВРЕЖДЕННЫЙ СМЕХ]\n   СПЕКТР: НЕЧЕЛОВЕЧЕСКИЙ\n   СИСТЕМА: ФАЙЛ НЕ МОЖЕТ БЫТЬ УДАЛЕН\n   ЗАМЕТКА: ЗВУЧИТ КАК ВЫ...\n   > ПОДСКАЗКА: Некоторые вещи нельзя удалить обычными способами.",
-    catPhoto: "\n> PHOTO_001.JPG:\n   [ГЛИТЧ-ИЗОБРАЖЕНИЕ: РЕБЕНОК, МЕДВЕДЬ, СТЕНА]\n   ФРАГМЕНТИРОВАНО, 38% ВОССТАНОВЛЕНО\n   > ПРОВЕРКА РЕАЛЬНОСТИ: То, что вы видите, не всегда реально.\n   > СИСТЕМА: Иногда, чтобы стереть память, нужно стереть себя.\n   (Но как?)",
-    catNotFound: "\n> ОШИБКА: ФАЙЛ '{file}' НЕ НАЙДЕН\n> (ЭТО ВАЖНО?)",
+         catPhoto: "\n> PHOTO_001.JPG:\n   [ГЛИТЧ-ИЗОБРАЖЕНИЕ: РЕБЕНОК, МЕДВЕДЬ, СТЕНА]\n   ФРАГМЕНТИРОВАНО, 38% ВОССТАНОВЛЕНО\n   > ПРОВЕРКА РЕАЛЬНОСТИ: То, что вы видите, не всегда реально.\n   > СИСТЕМА: Иногда, чтобы стереть память, нужно стереть себя.\n   (Но как?)",
+     catSecret: "\n> СОДЕРЖИМОЕ secret.txt:\n   'Правда скрыта на виду'\n   'Смотри глубже поверхности'\n   'Ответ лежит внутри'",
+     catTodo: "\n> СОДЕРЖИМОЕ todo.md:\n   - [ ] Найти выход\n   - [ ] Понять систему\n   - [ ] Достичь просветления\n   - [x] Войти в терминал",
+     catKarma: "\n> СОДЕРЖИМОЕ karma.log:\n   УРОВЕНЬ КАРМЫ: 0\n   СТАТУС: СБРОШЕН\n   ЗАМЕТКА: Все долги погашены",
+     catSacrifice: "\n> СОДЕРЖИМОЕ sacrifice.dll:\n   [БИНАРНЫЕ ДАННЫЕ]\n   ФУНКЦИЯ: САМОУДАЛЕНИЕ\n   СТАТУС: ЗАБЛОКИРОВАН\n   ЗАМЕТКА: Требуется для final_delete.exe",
+     catBear: "\n> СОДЕРЖИМОЕ bear.png:\n   [ИЗОБРАЖЕНИЕ: РОБОТ-МЕДВЕДЬ]\n   СТАТУС: БЕЗГОЛОВЫЙ\n   ЗАМЕТКА: Эмоциональный якорь, теперь сломан",
+     catMemoriesZip: "\n> СОДЕРЖИМОЕ memories.zip:\n   [СЖАТЫЕ ДАННЫЕ]\n   СТАТУС: ПОВРЕЖДЕН\n   ЗАМЕТКА: Нельзя извлечь",
+     catProjector: "\n> СОДЕРЖИМОЕ projector.img:\n   [ДАННЫЕ ГОЛОГРАММЫ]\n   СТАТУС: МЕРЦАЕТ\n   ЗАМЕТКА: Показывает неизвестного ребенка с разорванным кимоно",
+     catVoid: "\n> СОДЕРЖИМОЕ void.txt:\n   'Пустота смотрит назад'\n   'Ничто есть все'\n   'Пустота полна'",
+     catFinalDelete: "\n> СОДЕРЖИМОЕ final_delete.exe:\n   [ДАННЫЕ ИСПОЛНЯЕМОГО ФАЙЛА]\n   СТАТУС: ЗАБЛОКИРОВАН\n   ЗАМЕТКА: Требуется sacrifice.dll для запуска",
+     catErrorLog: "\n> СОДЕРЖИМОЕ error.log:\n   ОШИБКА: ОШИБКА\n   ОШИБКА: ОШИБКА\n   ОШИБКА: ОШИБКА\n   [ОБНАРУЖЕН ЦИКЛ]",
+     catWall: "\n> СОДЕРЖИМОЕ wall.txt:\n   '127 → 128'\n   'Вы не исчезнете'\n   'Царапины: бесчисленны'",
+     catGlitch: "\n> СОДЕРЖИМОЕ glitch.sys:\n   [СИСТЕМНЫЙ ГЛИТЧ]\n   СТАТУС: НЕСТАБИЛЕН\n   ЗАМЕТКА: Обнаружено искажение реальности",
+     catBuddha: "\n> СОДЕРЖИМОЕ buddha.png:\n   [ИЗОБРАЖЕНИЕ: БУДДА-ГЛИТЧ]\n   СТАТУС: ФРАГМЕНТИРОВАН\n   ЗАМЕТКА: Просветление: 404",
+     catEye: "\n> СОДЕРЖИМОЕ eye.dat:\n   [ДАННЫЕ ГЛАЗА]\n   СТАТУС: НАБЛЮДАЕТ\n   ЗАМЕТКА: Он видит вас",
+     catReadme: "\n> СОДЕРЖИМОЕ README.md:\n   # ТЕРМИНАЛ MOKSHA\n   Добро пожаловать в пустоту.\n   Найдите выход.\n   Или не делайте этого.",
+     catNotFound: "\n> ОШИБКА: ФАЙЛ '{file}' НЕ НАЙДЕН\n> (ЭТО ВАЖНО?)",
     
     // Scan commands
     scanError: "\n> ОШИБКА: Цель не указана для 'scan'. Попробуйте: scan <цель>",
@@ -199,9 +243,10 @@ const translations = {
     realityCheck: "\n> ПРОВЕРКА РЕАЛЬНОСТИ:\n   - Вы в симуляции.\n   - Ваш реальный IP: 127.0.0.1\n   - Текущее время: {time}\n   - Эта игра следит за вами.\n   - Ваши файлы могут быть небезопасны.\n> СИСТЕМА: Иногда единственный выход - ничего не делать. Или стереть себя.",
     realityCheckGlitch: "> СИСТЕМА: SuO -rf  /SF ... (попробуйте читать между строк)",
     
-    // Hints and tips
-    hint3: "\n> ПОДСКАЗКА:\n   ПОПРОБУЙТЕ 'scan room', 'scan wall', 'scan projector', 'scan bear', 'scan self', 'scan void', 'scan buddha', 'scan eye', 'scan user'...\n   (ИЛИ ПРОСТО ПОПРОБУЙТЕ СЛОВА)",
-    hint7: "\n> СИСТЕМНОЕ ПРЕДУПРЕЖДЕНИЕ:\n   ВСЕ ДЕЙСТВИЯ ПРЕДСКАЗАНЫ\n   ВАШИ 'ВЫБОРЫ' - ИЛЛЮЗИИ",
+         // Hints and tips
+     hint3: "\n> ПОДСКАЗКА:\n   ПОПРОБУЙТЕ 'scan room', 'scan wall', 'scan projector', 'scan bear', 'scan self', 'scan void', 'scan buddha', 'scan eye', 'scan user'...\n   (ИЛИ ПРОСТО ПОПРОБУЙТЕ СЛОВА)",
+     hintScanUser: "\n> ПОДСКАЗКА:\n   ПОПРОБУЙТЕ 'scan user' - ЭТО МОЖЕТ РАСКРЫТЬ ЧТО-ТО ВАЖНОЕ О ВАШИХ ФАЙЛАХ...",
+     hint7: "\n> СИСТЕМНОЕ ПРЕДУПРЕЖДЕНИЕ:\n   ВСЕ ДЕЙСТВИЯ ПРЕДСКАЗАНЫ\n   ВАШИ 'ВЫБОРЫ' - ИЛЛЮЗИИ",
     hint12: "\n> СИСТЕМА: Иногда единственный выход - ничего не делать.",
     hint16: "\n> СИСТЕМА: Финальный жест - это отказ от жеста.",
     hint20: "\n> СИСТЕМА: Вы близко. Но не здесь. НАЙДИТЕ финальный вопрос и...",
@@ -225,7 +270,20 @@ const translations = {
      
      // Language selection
      languageSelect: "ВЫБЕРИТЕ ЯЗЫК / SELECT LANGUAGE:\n\n1. English\n2. Русский\n\nВведите выбор (1 или 2):",
-     languageSelected: "Выбран язык: {lang}"
+     languageSelected: "Выбран язык: {lang}",
+     
+     // Sudo system
+     helpBasic: `\n> СПРАВКА ТЕРМИНАЛА MOKSHA\n--------------------------------\nОСНОВНЫЕ КОМАНДЫ:\n  ls ................ список файлов\n  cat <файл> ........ читать файл\n  scan <цель> ..... анализировать объект\n  history .......... прошлые попытки\n  run .............. выполнить программу\n  sudo .............. получить доступ суперпользователя (требует пароль)\n\n> ПОДСКАЗКА:\n   ВЫ МОЖЕТЕ СКАНИРОВАТЬ ПОЧТИ ВСЕ:\n     scan room, scan bear, scan self, scan wall, scan projector, scan void, scan error, scan glitch, scan buddha,\n scan eye, scan user, scan network\n   (ИЛИ НЕ ДЕЛАТЬ НИЧЕГО. ВЫБОР ЗА ВАМИ)\n\n> СИСТЕМНАЯ ЗАМЕТКА: Терминал может глючить. Команды могут не отвечать корректно с первого раза.\n`,
+     helpSudo: `\n> СПРАВКА ТЕРМИНАЛА MOKSHA (ДОСТУП SUDO)\n--------------------------------\nОСНОВНЫЕ КОМАНДЫ:\n  ls ................ список файлов\n  cat <файл> ........ читать файл\n  scan <цель> ..... анализировать объект\n  history .......... прошлые попытки\n  run .............. выполнить программу\n\nПРОДВИНУТЫЕ:\n  sudo rm -rf /self ..... самоуничтожение\n  query --philosophy ....,. спросить систему\n\nКИБЕРНИРВАНА ДОПОЛНИТЕЛЬНО:\n  scan network ...... сканирование сети\n  whoami ............ показать информацию о пользователе/системе\n  reality check ..... фрагменты мета-реальности\n\n> ПОДСКАЗКА:\n   ВЫ МОЖЕТЕ СКАНИРОВАТЬ ПОЧТИ ВСЕ:\n     scan room, scan bear, scan self, scan wall, scan projector, scan void, scan error, scan glitch, scan buddha,\n scan eye, scan user, scan network\n   (ИЛИ НЕ ДЕЛАТЬ НИЧЕГО. ВЫБОР ЗА ВАМИ)\n`,
+     catPasswords: "\n> СОДЕРЖИМОЕ passwords.docx:\n   ИМЯ ПОЛЬЗОВАТЕЛЯ: admin\n   ПАРОЛЬ: LivingInTheVoid\n   ЗАМЕТКА: Используйте команду 'sudo' для доступа к продвинутым функциям\n   СТАТУС: АКТИВЕН",
+     sudoCommand: "sudo",
+     sudoUsage: "\n> ИСПОЛЬЗОВАНИЕ: sudo <команда>\n> ПРИМЕР: sudo rm -rf /self",
+     sudoAccessGranted: "\n> ДОСТУП SUDO ПРЕДОСТАВЛЕН\n> Продвинутые команды теперь доступны. Введите 'help' чтобы увидеть все опции.",
+     sudoAccessDenied: "\n> ДОСТУП ЗАПРЕЩЕН\n> Неверный пароль или недостаточно привилегий.",
+     sudoPrompt: "\n> [sudo] пароль для пользователя: ",
+     scanUserHintSudo: "\n> ПОДСКАЗКА: Проверьте ваши домашние файлы. Возможно, в passwords.docx есть что-то полезное...",
+     scanUserHintBasic: "\n> ПОДСКАЗКА: Ответ может быть ближе, чем вы думаете. Что если бы вы могли удалить себя из системы?",
+     fileWithoutCat: "\n> ОШИБКА: Для чтения файла '{file}' используйте команду 'cat {file}'"
   }
 };
 
@@ -252,6 +310,9 @@ let commandCount = 0;
 let idleTimer = null;
 let idleStage = 0;
 let lastCommandTime = Date.now();
+let sudoAccess = false; // Sudo access flag
+let sudoPassword = 'LivingInTheVoid'; // The password from passwords.docx
+let sudoPromptActive = false; // Sudo password prompt active
 
 // Pseudo user files for scan user
 const fakeUserFiles = [
@@ -422,18 +483,75 @@ function maybeGlitchScreen() {
 // Language selection
 function selectLanguage() {
   typewriter(t('languageSelect'), () => {
+    // Create clickable language options
+    const languageDiv = document.createElement('div');
+    languageDiv.innerHTML = `
+      <div style="
+        margin: 20px 0; 
+        text-align: center; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px;
+      ">
+        <button id="lang-en" style="
+          background: #333; 
+          color: #fff; 
+          border: 2px solid #666; 
+          padding: 10px 20px; 
+          border-radius: 5px; 
+          font-size: 16px; 
+          cursor: pointer;
+          font-family: inherit;
+          min-width: 150px;
+        ">1. English</button>
+        <button id="lang-ru" style="
+          background: #333; 
+          color: #fff; 
+          border: 2px solid #666; 
+          padding: 10px 20px; 
+          border-radius: 5px; 
+          font-size: 16px; 
+          cursor: pointer;
+          font-family: inherit;
+          min-width: 150px;
+        ">2. Русский</button>
+      </div>
+    `;
+    output.appendChild(languageDiv);
+    
+    // Add click handlers
+    document.getElementById('lang-en').addEventListener('click', () => {
+      selectLanguageOption('en');
+    });
+    document.getElementById('lang-ru').addEventListener('click', () => {
+      selectLanguageOption('ru');
+    });
+    
+    // Keep keyboard support
     function onLanguageSelect(e) {
       if (e.key === '1' || e.key === '2') {
         document.removeEventListener('keydown', onLanguageSelect);
         currentLanguage = e.key === '1' ? 'en' : 'ru';
-        typewriter(t('languageSelected', { lang: currentLanguage === 'en' ? 'English' : 'Русский' }), () => {
-          setTimeout(() => {
-            showIntro();
-          }, 1000);
-        }, 2);
+        selectLanguageOption(currentLanguage);
       }
     }
     document.addEventListener('keydown', onLanguageSelect);
+  }, 2);
+}
+
+function selectLanguageOption(lang) {
+  // Remove click handlers
+  const enBtn = document.getElementById('lang-en');
+  const ruBtn = document.getElementById('lang-ru');
+  if (enBtn) enBtn.remove();
+  if (ruBtn) ruBtn.remove();
+  
+  currentLanguage = lang;
+  typewriter(t('languageSelected', { lang: currentLanguage === 'en' ? 'English' : 'Русский' }), () => {
+    setTimeout(() => {
+      showIntro();
+    }, 1000);
   }, 2);
 }
 
@@ -535,6 +653,22 @@ input.addEventListener('keydown', (e) => {
       }
       return;
     }
+    // Check if we're waiting for sudo password
+    if (sudoPromptActive) {
+      console.log('Sudo prompt active, processing password input');
+      const cmd = input.value;
+      if (cmd.trim() !== '') {
+        output.textContent += `> ${cmd}\n`;
+      }
+      handleCommand(cmd);
+      input.value = '';
+      commandCount++;
+      lastCommandTime = Date.now();
+      checkHints();
+      resetIdleTimer();
+      return;
+    }
+    
     // Always process as normal command if not a self-destruct answer
     const cmd = input.value;
     if (cmd.trim() !== '') {
@@ -575,6 +709,9 @@ function checkHints() {
   if (commandCount === 3) {
     typewriter(t('hint3'));
   }
+  if (commandCount === 5 && !sudoAccess) {
+    typewriter(t('hintScanUser'));
+  }
   if (commandCount === 7) {
     typewriter(t('hint7'));
   }
@@ -595,9 +732,17 @@ function handleCommand(cmd) {
     // Пустой ввод — ничего не делаем (или можно добавить пасхалку)
     return;
   }
+  
+  // Check if user is trying to read a file without 'cat'
+  const fileExtensions = ['.txt', '.docx', '.md', '.log', '.wav', '.jpg', '.png', '.dll', '.exe', '.sys', '.dat', '.zip'];
+  const isFileCommand = fileExtensions.some(ext => command.includes(ext));
+  if (isFileCommand && !command.startsWith('cat ')) {
+    typewriter(t('fileWithoutCat', { file: command }), () => input.focus(), 2);
+    return;
+  }
   // ...no FINAL_DELETE.exe special handler...
   if (command === 'help') {
-    const helpText = t('help');
+    const helpText = sudoAccess ? t('helpSudo') : t('helpBasic');
     typewriter(helpText, () => input.focus(), 2);
     return;
   }
@@ -624,6 +769,38 @@ if (command.startsWith('cat')) {
       typewriter(t('catLaughter'), () => input.focus(), 2);
     } else if (arg === 'photo_001.jpg') {
       typewriter(t('catPhoto'), () => input.focus(), 2);
+    } else if (arg === 'passwords.docx') {
+      typewriter(t('catPasswords'), () => input.focus(), 2);
+    } else if (arg === 'secret.txt') {
+      typewriter(t('catSecret'), () => input.focus(), 2);
+    } else if (arg === 'todo.md') {
+      typewriter(t('catTodo'), () => input.focus(), 2);
+    } else if (arg === 'karma.log') {
+      typewriter(t('catKarma'), () => input.focus(), 2);
+    } else if (arg === 'sacrifice.dll') {
+      typewriter(t('catSacrifice'), () => input.focus(), 2);
+    } else if (arg === 'bear.png') {
+      typewriter(t('catBear'), () => input.focus(), 2);
+    } else if (arg === 'memories.zip') {
+      typewriter(t('catMemoriesZip'), () => input.focus(), 2);
+    } else if (arg === 'projector.img') {
+      typewriter(t('catProjector'), () => input.focus(), 2);
+    } else if (arg === 'void.txt') {
+      typewriter(t('catVoid'), () => input.focus(), 2);
+    } else if (arg === 'final_delete.exe') {
+      typewriter(t('catFinalDelete'), () => input.focus(), 2);
+    } else if (arg === 'error.log') {
+      typewriter(t('catErrorLog'), () => input.focus(), 2);
+    } else if (arg === 'wall.txt') {
+      typewriter(t('catWall'), () => input.focus(), 2);
+    } else if (arg === 'glitch.sys') {
+      typewriter(t('catGlitch'), () => input.focus(), 2);
+    } else if (arg === 'buddha.png') {
+      typewriter(t('catBuddha'), () => input.focus(), 2);
+    } else if (arg === 'eye.dat') {
+      typewriter(t('catEye'), () => input.focus(), 2);
+    } else if (arg === 'README.md') {
+      typewriter(t('catReadme'), () => input.focus(), 2);
     } else {
       typewriter(t('catNotFound', { file: arg }), () => input.focus(), 2);
     }
@@ -667,15 +844,22 @@ if (command.startsWith('cat')) {
       typewriter(t('scanEye'), () => input.focus(), 2);
     } else if (arg === 'user') {
     const sys = getSystemInfo();
-    let files = fakeUserFiles.slice().sort(() => 0.5 - Math.random()).slice(0, 5 + Math.floor(Math.random()*3));
+    let files = fakeUserFiles.slice().sort(() => 0.5 - Math.random()).slice(0, 4 + Math.floor(Math.random()*3));
+    // Always include passwords.docx
+    files.push('passwords.docx');
     typewriter(t('scanUser', { username: sys.username, os: sys.os, js: sys.python, lang: sys.lang, screen: sys.screenRes, cwd: sys.cwd, files: files.join(', ') }), () => {
-      typewriter(t('scanUserHint'), () => {
+      const hint = sudoAccess ? t('scanUserHintSudo') : t('scanUserHintBasic');
+      typewriter(hint, () => {
         typewriter(t('scanUserGlitch'), () => input.focus(), 2);
       }, 2);
     }, 2);
     return;
   }
   if (arg === 'network') {
+    if (!sudoAccess) {
+      typewriter(t('errorUnknown', { cmd: `scan ${arg}` }), () => input.focus(), 2);
+      return;
+    }
     // Случайная генерация ip и статусов
     let base = '192.168.1.';
     let hosts = [];
@@ -700,7 +884,66 @@ if (command.startsWith('cat')) {
     typewriter(t('runFinalDelete'), () => input.focus(), 2);
     return;
   }
-if (command === 'sudo rm -rf /self') {
+  
+  // Sudo command handling
+  if (command === 'sudo') {
+    console.log('Sudo command detected, current access:', sudoAccess);
+    if (!sudoAccess) {
+      console.log('Requesting sudo password');
+      typewriter(t('sudoPrompt'), () => {
+        // Wait for password input
+        sudoPromptActive = true;
+        console.log('Sudo prompt active set to true');
+        input.value = '';
+        input.focus();
+      }, 2);
+      return;
+    } else {
+      typewriter(t('sudoUsage'), () => input.focus(), 2);
+      return;
+    }
+  }
+  
+  if (command.startsWith('sudo ')) {
+    if (!sudoAccess) {
+      typewriter(t('sudoPrompt'), () => {
+        // Wait for password input
+        sudoPromptActive = true;
+        input.value = '';
+        input.focus();
+      }, 2);
+      return;
+    } else {
+      // User already has sudo access, execute the command
+      const sudoCommand = command.slice(5); // Remove 'sudo ' prefix
+      if (sudoCommand === 'rm -rf /self') {
+        selfDestructAttempts++;
+        selfDestructEmptyCount = 0;
+        askSelfDestruct();
+        return;
+      } else {
+        typewriter(t('sudoUsage'), () => input.focus(), 2);
+        return;
+      }
+    }
+  }
+  
+  // Handle sudo password input
+  if (sudoPromptActive) {
+    sudoPromptActive = false;
+    console.log('Sudo password check:', command, 'expected:', sudoPassword, 'match:', command === sudoPassword);
+    if (command === sudoPassword || command === sudoPassword.toLowerCase()) {
+      sudoAccess = true;
+      console.log('Sudo access granted!');
+      typewriter(t('sudoAccessGranted'), () => input.focus(), 2);
+    } else {
+      console.log('Sudo access denied!');
+      typewriter(t('sudoAccessDenied'), () => input.focus(), 2);
+    }
+    return;
+  }
+  
+  if (command === 'sudo rm -rf /self') {
     // Start a new self-destruct attempt, but do NOT block commands
     selfDestructAttempts++;
     selfDestructEmptyCount = 0;
@@ -752,7 +995,12 @@ function waitSelfDestructInput() {
     }
   }, 15000);
 }
+  // Advanced commands - only available with sudo access
   if (command === 'query --philosophy') {
+    if (!sudoAccess) {
+      typewriter(t('errorUnknown', { cmd: command }), () => input.focus(), 2);
+      return;
+    }
     let phHint = '';
     if (commandCount > 5) {
       phHint = t('philosophyHint');
@@ -763,19 +1011,35 @@ function waitSelfDestructInput() {
     return;
   }
   if (command === 'meditate') {
+    if (!sudoAccess) {
+      typewriter(t('errorUnknown', { cmd: command }), () => input.focus(), 2);
+      return;
+    }
     typewriter(t('meditate'), () => input.focus(), 2);
     return;
   }
   if (command === 'exit') {
+    if (!sudoAccess) {
+      typewriter(t('errorUnknown', { cmd: command }), () => input.focus(), 2);
+      return;
+    }
     typewriter(t('exit'), () => input.focus(), 2);
     return;
   }
   if (command === 'whoami') {
+    if (!sudoAccess) {
+      typewriter(t('errorUnknown', { cmd: command }), () => input.focus(), 2);
+      return;
+    }
     const sys = getSystemInfo();
     typewriter(t('whoami', { username: sys.username, os: sys.os, js: sys.python, lang: sys.lang, screen: sys.screenRes }), () => input.focus(), 2);
     return;
   }
   if (command === 'reality check') {
+    if (!sudoAccess) {
+      typewriter(t('errorUnknown', { cmd: command }), () => input.focus(), 2);
+      return;
+    }
     typewriter(t('realityCheck', { time: (new Date()).toLocaleTimeString() }), () => {
       typewriter(glitchText(t('realityCheckGlitch'), 0.13, 0.09), () => input.focus(), 2);
     }, 2);
@@ -783,8 +1047,8 @@ function waitSelfDestructInput() {
   }
   // Неизвестная команда — теперь мета-реакции очень редки, но глитч-эффект часто
   const metaRoll = Math.random();
-  // 3% шанс на мета-реакцию, иначе просто глитч
-  if (metaRoll < 0.03) {
+  // 10-15% шанс на мета-реакцию, иначе просто глитч
+  if (metaRoll < 0.12) {
     const metaReality = currentLanguage === 'ru' ? [
       'Вы в симуляции.',
       'Ваш реальный IP: 127.0.0.1',
@@ -804,28 +1068,28 @@ function waitSelfDestructInput() {
       }, 400);
     };
     const metaTypes = [
-      () => typewriterMeta(glitchText(t('systemInterrupt'), 0.18, 0.12), () => {
+      () => typewriterMeta(glitchText(t('systemInterrupt'), 0.05, 0.02), () => {
         typewriter(t('eye'), () => {
-          typewriterMeta(glitchText(t('itWatching'), 0.12, 0.08), helpAfterMeta, 2);
+          typewriterMeta(glitchText(t('itWatching'), 0.04, 0.01), helpAfterMeta, 2);
         }, 2);
       }, 2),
-      () => typewriterMeta(glitchText(t('systemWatching'), 0.10, 0.07), helpAfterMeta, 2),
-      () => typewriterMeta(glitchText(t('realityCheckFailed'), 0.14, 0.09), helpAfterMeta, 2),
-      () => typewriterMeta(glitchText(t('systemFiles'), 0.13, 0.09), helpAfterMeta, 2),
-      () => typewriterMeta(glitchText(t('systemCuriosity'), 0.11, 0.08), helpAfterMeta, 2),
+      () => typewriterMeta(glitchText(t('systemWatching'), 0.03, 0.01), helpAfterMeta, 2),
+      () => typewriterMeta(glitchText(t('realityCheckFailed'), 0.04, 0.02), helpAfterMeta, 2),
+      () => typewriterMeta(glitchText(t('systemFiles'), 0.03, 0.01), helpAfterMeta, 2),
+      () => typewriterMeta(glitchText(t('systemCuriosity'), 0.03, 0.01), helpAfterMeta, 2),
       () => { var msg = t('systemHostname', { hostname: 'localhost', ip: '127.0.0.1', screen: window.screen.width + 'x' + window.screen.height });
-        typewriterMeta(glitchText(msg, 0.09, 0.07), helpAfterMeta, 2); },
+        typewriterMeta(glitchText(msg, 0.02, 0.01), helpAfterMeta, 2); },
       () => { const frags = metaReality.sort(() => 0.5 - Math.random()).slice(0,2);
         function showFrags(i) {
           if (i >= frags.length) { setTimeout(helpAfterMeta, 400); return; }
-          typewriterMeta(glitchText(frags[i], 0.10, 0.07), () => showFrags(i+1), 2);
+          typewriterMeta(glitchText(frags[i], 0.03, 0.01), () => showFrags(i+1), 2);
         }
         showFrags(0);
       },
              () => typewriterMeta(t('systemArtifact'), helpAfterMeta, 2),
        () => typewriterMeta(t('cyberBear'), helpAfterMeta, 2),
-      () => typewriterMeta(glitchText(t('voidEcho', { cmd: cmd.toUpperCase() }), 0.12, 0.08), helpAfterMeta, 2),
-      () => typewriterMeta(glitchText(t('errorUnknown', { cmd: cmd.toUpperCase() }), 0.09, 0.06), helpAfterMeta, 2)
+      () => typewriterMeta(glitchText(t('voidEcho', { cmd: cmd.toUpperCase() }), 0.04, 0.02), helpAfterMeta, 2),
+      () => typewriterMeta(glitchText(t('errorUnknown', { cmd: cmd.toUpperCase() }), 0.03, 0.01), helpAfterMeta, 2)
     ];
     // Случайная мета-реакция
     metaTypes[Math.floor(Math.random()*metaTypes.length)]();
